@@ -1,0 +1,84 @@
+         1.Method overloading
+
+
+import java.io.*;
+class Overload
+{
+    public void talk(String name)
+    {
+        System.out.println(name);
+    }
+    public void talking(String name)
+    {
+        System.out.println("hello "+ name);
+    }
+    public static void main(String Args[])
+    {
+        Overload obj=new Overload();
+        obj.talk("pavan");
+        obj.talking("shnaj");
+    }
+}
+
+**************************************************
+          2.method overriding
+        
+import java.io.*;
+class Chocolate
+{
+  public String taste()
+  {
+     String a="taste chocolately";
+    return a;
+  }
+  
+}
+class Candy extends Chocolate
+{
+    public String taste()
+    {
+      super.taste();
+     
+        System.out.println("taste sweet and "+super.taste() );
+       return null;
+    }
+   
+}
+
+public class methodoverride {
+    public static void main(String args[])
+    {
+        Candy obj1=new Candy();
+       obj1.taste();
+    }
+}
+
+****************************************************************
+             3.constructor
+
+class Person{
+    public Person(String name , int age)
+    {
+       System.out.println(name+" "+age);
+    }
+}
+class Teacher extends Person
+{
+   public Teacher(String name,int age,String degree)
+   {
+  super(name, age);
+    System.out.println(name +" "+age+" "+degree);
+
+   }
+}
+public class constructor {
+    public static void main (String args[])
+    {
+
+        Person obj1=new Person("pavan",23);
+        Teacher obj2=new Teacher("Shnaj",22,"MCA");
+        
+    }
+    
+}
+
